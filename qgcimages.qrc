@@ -51,7 +51,7 @@
         <file alias="APM/BrandImage">src/FirmwarePlugin/APM/APMBrandImage.png</file>
         <file alias="APM/BrandImageSub">src/FirmwarePlugin/APM/APMBrandImageSub.png</file>
         <file alias="APMode.svg">src/AutoPilotPlugins/Common/Images/APMode.svg</file>
-		<file alias="AR.svg">src/ui/toolbar/Images/AR.svg</file>
+        <file alias="AR.svg">src/ui/toolbar/Images/AR.svg</file>
         <file alias="Armed.svg">src/ui/toolbar/Images/Armed.svg</file>
         <file alias="arrow-down.png">src/QmlControls/arrow-down.png</file>
         <file alias="ArrowCCW.svg">src/AutoPilotPlugins/Common/Images/ArrowCCW.svg</file>
