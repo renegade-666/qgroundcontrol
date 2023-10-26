@@ -563,6 +563,7 @@ void QGCMapPolygon::endReset(void)
 
 void QGCMapPolygon::enterARMode(void)
 {
+    // TODO: Investigate moving dialog box creation to MainRootWindow.qml
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
     buttonBox->setCenterButtons(true);
     buttonBox->showFullScreen();
