@@ -149,7 +149,8 @@ Item {
         _createCircularPolygon(center, radius)
     }
 
-    function _dummyARModeAction() {
+    function _enterARMode() {
+        mapPolygon.enterARMode()
     }
 
     function _handleInteractiveChanged() {
@@ -570,7 +571,7 @@ Item {
             QGCButton {
                 _horizontalPadding: 0
                 visible:            !mapPolygon.traceMode
-                onClicked:          _dummyARModeAction()
+                onClicked:          _enterARMode()
 
                 contentItem: Row {
                     spacing:                ScreenTools.defaultFontPixelWidth

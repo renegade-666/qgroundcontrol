@@ -561,6 +561,15 @@ void QGCMapPolygon::endReset(void)
     emit centerChanged(_center);
 }
 
+void QGCMapPolygon::enterARMode(void)
+{
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    buttonBox->setCenterButtons(true);
+    buttonBox->showFullScreen();
+
+    connect(buttonBox, &QDialogButtonBox::rejected, buttonBox, &QDialogButtonBox::close);
+}
+
 void QGCMapPolygon::_beginResetIfNotActive(void)
 {
     if (!_resetActive) {

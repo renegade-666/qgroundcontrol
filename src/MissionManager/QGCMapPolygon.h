@@ -81,6 +81,8 @@ public:
     Q_INVOKABLE void beginReset (void);
     Q_INVOKABLE void endReset   (void);
 
+    Q_INVOKABLE void enterARMode (void);
+
     /// Saves the polygon to the json object.
     ///     @param json Json object to save to
     void saveToJson(QJsonObject& json);
