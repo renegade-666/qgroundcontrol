@@ -149,6 +149,9 @@ Item {
         _createCircularPolygon(center, radius)
     }
 
+    function _dummyARModeAction() {
+    }
+
     function _handleInteractiveChanged() {
         if (interactive) {
             addEditingVisuals()
@@ -562,6 +565,31 @@ Item {
                 text:               qsTr("Load KML/SHP...")
                 onClicked:          kmlOrSHPLoadDialog.openForLoad()
                 visible:            !mapPolygon.traceMode
+            }
+
+            QGCButton {
+                _horizontalPadding: 0
+                visible:            !mapPolygon.traceMode
+                onClicked:          _dummyARModeAction()
+
+                contentItem: Row {
+                    spacing:                ScreenTools.defaultFontPixelWidth
+                    anchors.verticalCenter: parent.verticalCenter
+                    QGCColoredImage {
+                        id:                     _icon
+                        height:                 parent.height
+                        width:                  height
+                        sourceSize.height:      parent.height
+                        fillMode:               Image.PreserveAspectFit
+                        source:                 "/qmlimages/AR.svg"
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                    Label {
+                        id:                     _label
+                        text:                   qsTr("AR Mode")
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
             }
         }
     }
